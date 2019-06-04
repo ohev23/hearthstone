@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body style="background-image: url('images/bg.jpg');background-size: 100%">
+<div class="enemy"></div>
+<div class="player"></div>
+<script type="text/javascript">
+	let enemy= document.querySelector(".enemy")
+	let player= document.querySelector(".player")
+	let getRandom = function(){
+			let rand = Math.random()*4
+			let round=Math.round(rand)
+				return round
+		}	
+
+	let random= function(){
+		let rand = Math.random("img")*10
+		let round=Math.round(rand)
+		return round
+	}
+	 let img = ["images/1.png","images/2.png","images/3.png","images/4.png","images/5.png","images/6.png","images/7.png","images/8.png","images/9.png","images/10.png"]
+
+
+    	let createEnemyCards = function(arg){
+			for(let index = 0; index<arg; index = index +1){
+				let elem = document.createElement("img")
+			enemy.appendChild(elem)
+			elem.style.height = "200px"
+			elem.src = img[random()]
+
+			}
+		}
+
+
+			let createPlayerCards = function(arg){
+			for(let index = 0; index<arg; index = index +1){
+			let png = document.createElement("img")
+			player.appendChild(png)
+			png.style.height = "200px"
+			png.src = img[random()]
+			}
+		}
+</script>
+</body>
+</html>

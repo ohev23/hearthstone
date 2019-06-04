@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	let getRandom = function(){
+			let rand = Math.random()*4
+			let round=Math.round(rand)
+				return round
+		}	
+
+    	let createEnemyCards = function(getRandom){
+			for(let index = 0; index<getRandom; index = index +1){
+			let elem = document.createElement("img")
+			document.body.appendChild(elem)
+			elem.style.height = "200px"
+			elem.src = "images/1.png"
+			}
+		}
+
+			let createPlayerCards = function(getRandom){
+			for(let index = 0; index<getRandom; index = index +1){
+			let img = document.createElement("img")
+			document.body.appendChild(img)
+			img.style.height = "200px"
+			img.src = "images/2.png"
+			}
+		}
+</script>
+</body>
+</html>
